@@ -3,6 +3,14 @@ y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
 	
+    var dato;
+
+    //dato = "anda?";
+
+    dato = document.getElementById('elNombre').value;
+
+    alert(dato);
+
 }
 
 
