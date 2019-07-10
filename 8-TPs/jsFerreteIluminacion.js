@@ -10,5 +10,67 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
+ 	var Cantidad;
+    var Marca;
+    var precioDescuento;
+    var impuesto;
+
+    Cantidad = document.getElementById('Cantidad').value;
+    Marca = document.getElementById('Marca').value;
+    
+    if(Cantidad >=6){ // Punto A
+
+        precioDescuento = (Cantidad*35)*0.50;
+
+        document.getElementById('precioDescuento').value = precioDescuento;
+    }else if (Cantidad == 5){ // Punto B
+        if(Marca == "ArgentinaLuz"){
+            
+            precioDescuento = (Cantidad*35)*0.6;
+            document.getElementById('precioDescuento').value = precioDescuento;
+
+        } else {
+
+            precioDescuento = (Cantidad*35)*0.7;
+            document.getElementById('precioDescuento').value = precioDescuento;
+
+        }
+    } else if (Cantidad == 4){ // Punto C
+        if(Marca == "ArgentinaLuz" || Marca == "FelipeLamparas"){
+            
+            precioDescuento = (Cantidad*35)*0.75;
+            document.getElementById('precioDescuento').value = precioDescuento;
+
+        } else {
+
+            precioDescuento = (Cantidad*35)*0.8;
+            document.getElementById('precioDescuento').value = precioDescuento;
+
+        }
+    } else if (Cantidad == 3){ // Punto D
+        if (Marca == "ArgentinaLuz"){
+
+            precioDescuento = (Cantidad*35)*0.85;
+            document.getElementById('precioDescuento').value = precioDescuento;
+
+        } else if(Marca == "FelipeLamparas"){
+
+            precioDescuento = (Cantidad*35)*0.9;
+            document.getElementById('precioDescuento').value = precioDescuento;
+
+        } else{
+
+            precioDescuento = (Cantidad*35)*0.95;
+            document.getElementById('precioDescuento').value = precioDescuento;
+
+        }
+    }
+
+    if (precioDescuento > 120){
+
+        impuesto = precioDescuento * 0.10;
+        precioDescuento = precioDescuento + impuesto;
+        document.getElementById('precioDescuento').value = precioDescuento;
+        alert("Usted pagó "+impuesto+" de IIBB.");
+    }
 }
