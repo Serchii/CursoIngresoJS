@@ -1,4 +1,5 @@
 # CursoIngresoJS
+# Sergio Ledesma
 Curso de ingreso con JavaScript
 
 ejercitación y TP para rendir el examen de ingreso 
@@ -7,3 +8,4 @@ ejercitación y TP para rendir el examen de ingreso
 
 
 http://octaviovillegas.github.io/CursoIngresoJS/index.html
+
