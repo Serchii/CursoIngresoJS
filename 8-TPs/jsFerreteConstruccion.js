@@ -9,11 +9,22 @@ debemos mostrar cuantas bolsas se necesitan de cada uno para las medidas que nos
 
 function Rectangulo () 
 {
+    var Largo;
+    var Ancho;
+    
+    
+    Largo = document.getElementById('Largo').value;
+    Ancho = document.getElementById('Ancho').value;
+
+    Largo = parseInt(Largo);
+    Ancho = parseInt(Ancho);
+
+
 
 }
 function Circulo () 
 {
-	
+	var Radio;
 }
 function Materiales () 
 {
