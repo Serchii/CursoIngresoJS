@@ -19,14 +19,37 @@ function Rectangulo ()
     Largo = parseInt(Largo);
     Ancho = parseInt(Ancho);
 
+    perimetro = (Largo+Ancho)*2;
+
+    alert("Se deben comprar "+perimetro*3+" metros de alambre");
 
 
 }
 function Circulo () 
 {
 	var Radio;
+    var Circunferencia;
+
+    Radio = document.getElementById('Radio').value;
+
+    Circunferencia = 2 * Math.PI * Radio;
+
+    alert("Se deben comprar "+Circunferencia*3+" metros de alambre");
+
 }
 function Materiales () 
 {
-	
+	var Largo;
+    var Ancho;
+    var Area;
+
+    Largo = document.getElementById('Largo').value;
+    Ancho = document.getElementById('Ancho').value;
+
+    Largo = parseInt(Largo);
+    Ancho = parseInt(Ancho);
+
+    Area = Largo*Ancho;
+
+    alert("Se necesitaran "+Area*2+" bolsas de cemento y "+Area*3+" de cal");
 }

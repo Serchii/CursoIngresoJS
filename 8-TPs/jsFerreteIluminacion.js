@@ -12,13 +12,14 @@ function CalcularPrecio ()
 {
  	var Cantidad;
     var Marca;
+    var desc;
     var precioDescuento;
     var impuesto;
 
     Cantidad = document.getElementById('Cantidad').value;
     Marca = document.getElementById('Marca').value;
     
-    if(Cantidad >=6){ // Punto A
+    /*if(Cantidad >=6){ // Punto A
 
         precioDescuento = (Cantidad*35)*0.50;
 
@@ -72,5 +73,23 @@ function CalcularPrecio ()
         precioDescuento = precioDescuento + impuesto;
         document.getElementById('precioDescuento').value = precioDescuento;
         alert("Usted pagó "+impuesto+" de IIBB.");
+    }*/
+
+    /*if(Cantidad >= 6)
+    {
+        desc = 0.5;
     }
+    else if(Cantidad == 5)
+    {
+        switch(Marca)
+        {
+            case "ArgentinaLuz":
+                desc = 0.6;
+                break;
+            default:
+                desc = 0.7;
+                break;
+        }
+    }*/
+
 }

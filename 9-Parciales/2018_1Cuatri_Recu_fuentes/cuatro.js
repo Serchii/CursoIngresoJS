@@ -20,7 +20,7 @@ function mostrar()
         resultado = valor1+valor2;
         alert(resultado);
     }
-    else if (valor1>valor2);
+    else if (valor1>valor2)
     {
         valor1=parseInt(valor1);
         valor2=parseInt(valor2);
