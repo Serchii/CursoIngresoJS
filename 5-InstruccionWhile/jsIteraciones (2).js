@@ -6,10 +6,14 @@ function mostrar()
 
 	contador = 10;
 
+	/*
 	while(contador>0){
 		alert(contador--);
 	}
-	
+	*/
+	do{
+		alert(contador--);
+	}while(contador > 0);
 
 
 }//FIN DE LA FUNCIÓN

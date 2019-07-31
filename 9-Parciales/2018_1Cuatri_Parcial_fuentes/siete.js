@@ -14,7 +14,7 @@ function mostrar()
     var promedio;
     var minNota;
     var minSexo;
-    var cantVarones;
+    var cantVarones = 0;
 
     while(contador < 5)
     {
@@ -22,7 +22,7 @@ function mostrar()
         numero = prompt("Ingrese la nota del alumno");
         numero = parseInt(numero);
 
-        while(isNaN(numero) || !(numero>=0 || numero<=10))
+        while(isNaN(numero) || !(numero>=0 && numero<=10))
         {
             numero = prompt("Valor invalido. Ingrese la nota del alumno");
             numero = parseInt(numero);
@@ -41,16 +41,16 @@ function mostrar()
 
         if(contador == 0)
         {
-            minNota = nota;
+            minNota = numero;
             minSexo = sexo;
         }
-        else if(nota < minNota)
+        else if(numero < minNota)
         {
-            minNota = nota;
+            minNota = numero;
             minSexo = sexo;
         }
 
-        if(nota >= 6 && sexo == "m")
+        if(numero >= 6 && sexo == "m")
         {
             cantVarones++;
         }
@@ -62,6 +62,6 @@ function mostrar()
     promedio = notas/contador;
 
     alert("El promedio de las notas totales es : "+promedio);
-    alert("La nota más baja es : "+" y el sexo de esa persona : ");
-    alert("La cantidad de varones que su nota haya sido mayor o igual a 6");
+    alert("La nota más baja es : "+minNota+" y el sexo de esa persona es : "+minSexo);
+    alert("La cantidad de varones que su nota haya sido mayor o igual a 6 es : "+cantVarones);
 }
