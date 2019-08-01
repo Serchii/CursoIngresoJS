@@ -39,14 +39,7 @@ function mostrar()
     {
 
         mensaje = "ingrese una letra";
-
-        do
-        {
-            letra = prompt(mensaje);
-            letra = parseInt(letra);
-            mensaje = "dato erroneo, por favor ingrese una letra";
-        }
-        while(!(isNaN(letra)));
+        letra = prompt(mensaje);
 
         mensaje = "ingrese un numero entre -100 y 100";
 
@@ -112,6 +105,6 @@ function mostrar()
     document.write("c) La cantidad de ceros es : "+cantCeros+"<br>");
     document.write("d) El promedio de todos los números positivos ingresados es : "+(positivos/cantPos)+"<br>");
     document.write("e) La suma de todos los números negativos es : "+negativos+"<br>");
-    document.write("f) El número y la letra del máximo es : "+letra+" "+numero+ " <br>Y del mínimo es : "+letra+" "+numero);
+    document.write("f) El número y la letra del máximo es : "+maxLetra+" "+maxNumero+ " <br>Y del mínimo es : "+minLetra+" "+minNumero);
 
 }
